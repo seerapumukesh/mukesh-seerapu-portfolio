@@ -40,3 +40,62 @@
 @media(max-width:900px){.intro h1{font-size:clamp(30px,4vw,44px)}.story h1{font-size:clamp(37px,5vw,59px)}.tile-title,.tile:not(.large) .tile-title{font-size:clamp(20px,2.8vw,27px)}}
 @media(max-width:690px){.intro h1{font-size:clamp(30px,7.6vw,43px);margin:17px 0 7px;line-height:1.1}.intro-side{max-width:100%;gap:12px}.intro-side .orbit-symbol{font-size:35px;width:40px;height:40px}.story h1{font-size:clamp(36px,8.5vw,52px);margin:21px 0 33px}.story-lead{font-size:21px}.tile-title,.tile:not(.large) .tile-title{font-size:clamp(19px,4.6vw,25px)}.drawer h2{font-size:46px}.tile-head{font-size:8px}.career-item h2{font-size:26px}}
 @media(max-width:390px){.tile-title,.tile:not(.large) .tile-title{font-size:28px}.intro h1{font-size:31px}}
+
+/* Experience: horizontal editorial card rail and context-sensitive project collection */
+.experience-studio{padding:45px 0 100px;animation:appear .45s ease;min-height:calc(100vh - 128px)}
+.experience-header{display:flex;align-items:flex-end;justify-content:space-between;gap:26px;padding:0 5px 29px}
+.experience-eyebrow{font:10px 'DM Mono',monospace;letter-spacing:.14em;color:var(--green);margin:0 0 15px}
+.experience-header h1{font:600 clamp(29px,3vw,49px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.055em;margin:0 0 13px}
+.experience-header h1 span{color:var(--orange)}
+.experience-header p:not(.experience-eyebrow){font-size:13px;line-height:1.6;color:#687169;max-width:520px;margin:0}
+.experience-nav{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.experience-nav>span{font:9px 'DM Mono',monospace;letter-spacing:.03em;color:#81877e;margin-right:12px}
+.experience-nav button{width:37px;height:37px;background:transparent;border:1px solid #aeb8aa;border-radius:50%;display:grid;place-items:center;font-size:19px;transition:.2s}
+.experience-nav button:hover{background:var(--green);color:white;border-color:var(--green)}
+.company-rail{display:flex;gap:15px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#aebcad transparent;padding:0 4px 18px;max-width:100%;-webkit-overflow-scrolling:touch}
+.company-card{position:relative;flex:0 0 clamp(235px,25vw,302px);height:clamp(320px,35vw,390px);scroll-snap-align:start;overflow:hidden;border:2px solid transparent;border-radius:9px;padding:0;text-align:left;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;background:#456a64;color:#fff;transition:border-color .25s,transform .28s,box-shadow .28s}
+.company-card:hover{transform:translateY(-4px)}
+.company-card.chosen{border-color:var(--orange);box-shadow:0 0 0 3px #f0eee7,0 0 0 5px var(--orange);transform:translateY(-1px)}
+.company-surface{position:absolute;inset:0;z-index:-2;overflow:hidden;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.company-card:hover .company-surface{transform:scale(1.055)}
+.company-surface:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0b121a8a,transparent 36%,transparent 43%,#10201cc7)}
+.company-orbit{position:absolute;display:block;border-radius:50%;border:1.5px solid #ffffffe0;pointer-events:none}
+.company-card .orbit-one{width:130%;height:108%;left:10%;top:7%;transform:rotate(-31deg) scaleX(.60)}
+.company-card .orbit-two{width:130%;height:108%;left:-15%;top:-10%;transform:rotate(48deg) scaleX(.6)}
+.company-emblem{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%) rotate(-16deg);color:#e9f0c4;font:500 230px/.9 'Space Grotesk',sans-serif;letter-spacing:-.07em;text-shadow:0 15px 35px #0003}
+.company-dupaco .company-surface{background:radial-gradient(circle at 60% 35%,#9bbe99,#215c55 68%,#153d3f)}
+.company-atlantic .company-surface{background:radial-gradient(circle at 25% 30%,#e3b582,#a75d40 54%,#6c363b)}
+.company-atlantic .company-emblem{font-family:Georgia,serif;color:#ffe0b2}
+.company-fhlb .company-surface{background:radial-gradient(circle at 80% 30%,#9ec3df,#345f98 58%,#283855)}
+.company-fhlb .company-emblem{font-family:Georgia,serif;color:#d8e6fa}
+.company-card-head,.company-card-foot{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:18px;z-index:2;font:10px 'DM Mono',monospace;line-height:1.4;letter-spacing:.02em}
+.company-card-head span:last-child{text-align:right;opacity:.85}
+.company-card strong{z-index:2;display:block;padding:0 17px;max-width:95%;font:600 clamp(23px,2.45vw,34px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.055em;text-shadow:0 2px 12px #0003;margin-top:auto;margin-bottom:14px}
+.company-card-foot{align-items:end;padding-top:0;font-size:9px}
+.company-check{color:#fff;font-weight:500;white-space:nowrap;text-align:right}
+.company-card.chosen .company-check{background:var(--orange);padding:8px 9px;border-radius:3px}
+.company-end{min-width:125px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;scroll-snap-align:start;color:#969d92;font:10px/1.5 'DM Mono',monospace;text-align:center}
+.company-end strong{font-size:46px;color:#b9c3b2;font-weight:400}
+.company-details{margin-top:29px;border-top:1px solid var(--ink);animation:appear .35s ease}
+.company-details-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:31px 4px 0}
+.active-label{font:10px 'DM Mono',monospace;color:var(--green);letter-spacing:.08em;margin:0 0 16px;display:flex;align-items:center;gap:10px}
+.active-indicator{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px #f05b3523}
+.company-details h2{font:600 clamp(25px,2.7vw,42px)/1.14 'Space Grotesk',sans-serif;letter-spacing:-.055em;margin:0 0 13px}
+.company-role{font-size:12px;color:#666c61;margin:0}
+.company-role span{margin:0 7px;color:#b3b6ad}
+.active-company-mark{font:600 66px 'Space Grotesk',sans-serif;color:#a1b7a5;align-self:center}
+.company-intro{font-size:16px;line-height:1.65;color:#566257;max-width:740px;padding:18px 4px 22px;margin:0}
+.work-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--rule);padding:16px 4px;color:var(--green);font:10px 'DM Mono',monospace;letter-spacing:.06em}
+.company-projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.company-project{display:flex;flex-direction:column;min-height:225px;padding:21px 22px;background:#e3e6db;border:1px solid #cbd2c5;transition:transform .2s,background .2s}
+.company-project:nth-child(3n+2){background:#e6e2d8;border-color:#d1cbbf}
+.company-project:hover{transform:translateY(-3px);background:#dce8d9}
+.company-project-top{display:flex;justify-content:space-between;align-items:center;gap:10px;font:9px 'DM Mono',monospace;letter-spacing:.06em;color:#698078}
+.company-project h3{font:600 clamp(20px,2vw,28px)/1.12 'Space Grotesk',sans-serif;letter-spacing:-.045em;margin:25px 0 11px}
+.company-project>p{font-size:13px;line-height:1.65;color:#5e655d;margin:0 0 22px}
+.project-tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.project-tools span{font:9px 'DM Mono',monospace;border:1px solid #aebbab;color:#3b604e;padding:7px 8px;border-radius:20px}
+.experience-note{font:11px/1.6 'DM Sans',sans-serif;color:#868c81;margin:23px 4px 0;max-width:650px}
+@media(max-width:1100px){.experience-nav>span{display:none}.company-card{flex-basis:250px;height:345px}.company-card strong{font-size:27px}.company-projects{grid-template-columns:1fr 1fr}}
+@media(max-width:690px){.experience-studio{padding:23px 0 70px}.experience-header{padding:0 2px 20px;align-items:flex-end}.experience-header h1{font-size:29px}.experience-header p:not(.experience-eyebrow){font-size:12px}.experience-nav{gap:5px}.experience-nav button{width:31px;height:31px;font-size:17px}.company-rail{gap:11px;padding:5px 5px 15px}.company-card{flex:0 0 220px;height:305px}.company-card strong{font-size:24px}.company-emblem{font-size:185px}.company-details{margin-top:23px}.company-details-heading{padding-top:24px}.company-details h2{font-size:27px}.active-company-mark{font-size:45px}.company-role{line-height:1.6}.company-intro{font-size:14px}.company-projects{grid-template-columns:1fr}.company-project{min-height:190px;padding:17px}.company-project h3{font-size:23px;margin:20px 0 10px}}
+@media(prefers-reduced-motion:reduce){.company-card,.company-surface,.company-details{animation:none;transition:none}}
