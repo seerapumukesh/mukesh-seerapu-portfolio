@@ -99,3 +99,17 @@
 @media(max-width:1100px){.experience-nav>span{display:none}.company-card{flex-basis:250px;height:345px}.company-card strong{font-size:27px}.company-projects{grid-template-columns:1fr 1fr}}
 @media(max-width:690px){.experience-studio{padding:23px 0 70px}.experience-header{padding:0 2px 20px;align-items:flex-end}.experience-header h1{font-size:29px}.experience-header p:not(.experience-eyebrow){font-size:12px}.experience-nav{gap:5px}.experience-nav button{width:31px;height:31px;font-size:17px}.company-rail{gap:11px;padding:5px 5px 15px}.company-card{flex:0 0 220px;height:305px}.company-card strong{font-size:24px}.company-emblem{font-size:185px}.company-details{margin-top:23px}.company-details-heading{padding-top:24px}.company-details h2{font-size:27px}.active-company-mark{font-size:45px}.company-role{line-height:1.6}.company-intro{font-size:14px}.company-projects{grid-template-columns:1fr}.company-project{min-height:190px;padding:17px}.company-project h3{font-size:23px;margin:20px 0 10px}}
 @media(prefers-reduced-motion:reduce){.company-card,.company-surface,.company-details{animation:none;transition:none}}
+
+/* Navigation: text-only labels, no decorative section numbers */
+.node-index,.career-n{display:none!important}
+.nav-node{font-size:20px}
+.nav-node.selected .node-arrow{margin-left:9px}
+.drawer-nav button small{display:none}
+.company-oyo .company-surface{background:radial-gradient(circle at 25% 35%,#e6bd62,#b96537 55%,#603d45)}
+.company-oyo .company-emblem{color:#fff0c9}
+.company-jhink .company-surface{background:radial-gradient(circle at 76% 22%,#a3c0b5,#4c8584 52%,#264c62)}
+.company-jhink .company-emblem{color:#d4f1dd}
+.company-axis .company-surface{background:radial-gradient(circle at 75% 35%,#e7b8a8,#ab5261 53%,#6b354f)}
+.company-axis .company-emblem{color:#ffe6d9}
+.company-rail{scroll-padding-inline:5px}
+@media(max-width:690px){.nav-node{font-size:13px}.node-index{display:none!important}}
