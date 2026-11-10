@@ -247,3 +247,63 @@
 @media(prefers-reduced-motion:reduce){
   .nav-wheel .nav-node{transition:none!important;will-change:auto}
 }
+
+/* Circular turntable: every entry is anchored to a permanent point on the same wheel.
+   Rotating the wheel never changes the clockwise order of Projects/Blog/About/Experience/Contact. */
+.nav-wheel{position:relative}
+.orbit-turntable{
+ position:absolute;
+ inset:0;
+ z-index:3;
+ transform-origin:165px 190px;
+ transition:transform .85s cubic-bezier(.2,.8,.2,1);
+ will-change:transform;
+ pointer-events:none;
+}
+.orbit-anchor{
+ position:absolute;
+ left:165px;
+ top:190px;
+ width:0;
+ height:0;
+ transform-origin:0 0;
+ pointer-events:none;
+}
+.nav-wheel .nav-node.orbit-button{
+ position:absolute;
+ left:0;
+ top:0;
+ width:max-content;
+ max-width:190px;
+ margin:0;
+ font:600 20px/1.15 'Space Grotesk',sans-serif;
+ padding:10px 15px;
+ transform-origin:center center;
+ color:#878e83;
+ background:transparent;
+ border:0;
+ border-radius:6px;
+ white-space:nowrap;
+ z-index:4;
+ pointer-events:auto;
+ transition:transform .85s cubic-bezier(.2,.8,.2,1),background-color .3s,color .3s,box-shadow .3s,padding .3s;
+}
+.nav-wheel .nav-node.orbit-button.selected{
+ background:var(--orange);
+ color:white;
+ padding:12px 23px;
+ box-shadow:4px 5px 0 #d6d8c7;
+}
+.nav-wheel .nav-node.orbit-button:not(.selected):hover{
+ background:#dfe4d8;
+ color:var(--green);
+}
+.nav-wheel .nav-node.orbit-button.selected:hover{background:#df4c30}
+.nav-wheel .wheel-core{z-index:5;pointer-events:none}
+.nav-wheel .wheel-ring{z-index:1}
+@media(max-width:690px){
+ .nav-wheel .nav-node.orbit-button{position:absolute;left:0;top:0;transform-origin:center center;font-size:19px;padding:10px 14px}
+ .nav-wheel .nav-node.orbit-button.selected{padding:12px 20px}
+ .orbit-turntable{transform-origin:165px 190px}
+}
+@media(prefers-reduced-motion:reduce){.orbit-turntable,.nav-wheel .nav-node.orbit-button{transition:none!important;will-change:auto}}
