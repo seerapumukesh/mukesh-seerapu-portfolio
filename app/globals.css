@@ -113,3 +113,41 @@
 .company-axis .company-emblem{color:#ffe6d9}
 .company-rail{scroll-padding-inline:5px}
 @media(max-width:690px){.nav-node{font-size:13px}.node-index{display:none!important}}
+
+/* Brand-inspired Experience cards: typographic identity instead of generic orbit icons.
+   These are original stylized wordmarks, NOT copies of companies' official trademarks. */
+.company-card{border:1px solid var(--brand-border,#cad3cb);background:var(--brand-bg,#295e4f);color:var(--brand-text,#fff);box-shadow:0 4px 10px #1d272216}
+.company-card.chosen{border:2px solid var(--brand-accent,#f05b35);box-shadow:0 0 0 3px #f0eee7,0 0 0 5px var(--brand-accent,#f05b35),0 14px 25px #192b2636}
+.company-card:hover:not(.chosen){box-shadow:0 13px 25px #192b2638}
+.company-card .company-surface{background:var(--brand-bg)!important}
+.company-card .company-surface:after{background:linear-gradient(180deg,#0c13192b,transparent 25%,#0c131905 53%,#081212b8)}
+.company-card .company-emblem{position:absolute;top:39%;left:50%;transform:translate(-50%,-50%) rotate(var(--brand-rotate,0deg));font:700 var(--brand-size,48px)/1.05 'Space Grotesk',sans-serif!important;letter-spacing:var(--brand-tracking,-.07em);color:var(--brand-logo,#fff)!important;text-shadow:none;white-space:pre-wrap;text-align:center;max-width:92%;width:100%;padding:0 14px;overflow-wrap:normal;z-index:1;filter:drop-shadow(0 9px 17px #0002)}
+.company-card .company-card-head{font-size:9px;letter-spacing:.04em}
+.company-card .brand-kicker{padding:6px 8px;border:1px solid #ffffff70;background:#ffffff0e;border-radius:2px;font-weight:500;max-width:72%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.company-card>strong{font-size:clamp(20px,2.05vw,29px);max-width:95%;line-height:1.12;letter-spacing:-.045em}
+.company-card .company-check{font-size:9px}
+.company-card.chosen .company-check{background:var(--brand-accent,#f05b35);color:var(--brand-accent-ink,#fff)}
+.company-brand-shape{display:block;position:absolute;pointer-events:none;transition:transform .65s ease}
+.company-card:hover .shape-primary{transform:translate(4px,-7px) rotate(8deg)}
+.company-dupaco{--brand-bg:linear-gradient(155deg,#c0dad1 0%,#4b8b72 43%,#135744 100%);--brand-logo:#f7ffed;--brand-accent:#e97d39;--brand-border:#639a83;--brand-size:64px}
+.company-dupaco .shape-primary{width:260px;height:260px;left:-85px;top:35px;border:60px solid #f0f4d82a;border-radius:50%}
+.company-dupaco .shape-secondary{width:165px;height:165px;right:-48px;top:64px;border:2px solid #f5f6e38a;border-radius:50%}
+.company-atlantic{--brand-bg:linear-gradient(155deg,#21344a 0%,#30506e 52%,#927857 100%);--brand-logo:#f2e7ce;--brand-accent:#d4b579;--brand-accent-ink:#19283b;--brand-border:#557083;--brand-size:43px;--brand-tracking:-.055em}
+.company-atlantic .shape-primary{width:340px;height:340px;top:45px;left:-50px;border:1px solid #f3d5aa72;border-radius:50%}
+.company-atlantic .shape-secondary{width:300px;height:200px;top:-10px;right:-190px;border:75px solid #e1cb9521;border-radius:50%;transform:rotate(-40deg)}
+.company-fhlb{--brand-bg:linear-gradient(145deg,#d6e9f0 0%,#4e8aa9 46%,#163950 100%);--brand-logo:#ecf7fa;--brand-accent:#92c9dc;--brand-accent-ink:#143d55;--brand-border:#4d879d;--brand-size:50px}
+.company-fhlb .shape-primary{width:125%;height:170px;left:-11%;top:100px;background:linear-gradient(160deg,transparent 35%,#e5f5fb65 35% 39%,transparent 39% 53%,#e5f5fb3f 53% 57%,transparent 57%);transform:rotate(-10deg)}
+.company-fhlb .shape-secondary{width:85%;height:85%;right:-40%;top:10%;border:2px solid #fff9;border-radius:50%}
+.company-oyo{--brand-bg:linear-gradient(160deg,#faeeee 0%,#df5654 38%,#a71828 100%);--brand-logo:#fff;--brand-accent:#e33d3a;--brand-border:#d76968;--brand-size:95px;--brand-tracking:-.12em}
+.company-oyo .shape-primary{width:240px;height:240px;top:25px;left:30px;border:38px solid #fff4;border-radius:50%}
+.company-oyo .shape-secondary{height:330px;width:100px;top:-60px;right:-20px;background:#ffffff16;transform:rotate(33deg)}
+.company-jhink{--brand-bg:linear-gradient(155deg,#d0e5e3 0%,#67ada5 44%,#186a70 100%);--brand-logo:#edffff;--brand-accent:#38a8a2;--brand-border:#70aca2;--brand-size:47px}
+.company-jhink .shape-primary{width:230px;height:230px;top:32px;left:40px;border:1px dashed #e9fff7a8;border-radius:22px;transform:rotate(35deg)}
+.company-jhink .shape-secondary{width:175px;height:175px;top:66px;left:75px;border:35px solid #f0fff72b;border-radius:40px;transform:rotate(35deg)}
+.company-axis{--brand-bg:linear-gradient(155deg,#ebc9ce 0%,#a8506e 43%,#651c45 100%);--brand-logo:#fff6fa;--brand-accent:#9d315f;--brand-border:#ad6681;--brand-size:63px}
+.company-axis .shape-primary{width:170px;height:210px;left:25px;top:33px;clip-path:polygon(51% 0%,100% 100%,72% 100%,50% 43%,26% 100%,0% 100%);background:#ffeaf74f}
+.company-axis .shape-secondary{width:110%;height:1px;left:-5%;top:55%;background:#ffecf17d;transform:rotate(-27deg)}
+.active-company-wordmark{display:inline-flex;align-items:center;justify-content:center;max-width:30%;min-width:100px;max-height:85px;padding:15px;border:1px solid var(--rule);border-radius:5px;color:var(--green);font:700 clamp(15px,2vw,26px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.06em;text-align:center;overflow-wrap:anywhere}
+.wordmark-atlantic{color:#35526b}.wordmark-fhlb{color:#2d6e8c}.wordmark-oyo{color:#c42c32}.wordmark-jhink{color:#19817d}.wordmark-axis{color:#843755}
+@media(max-width:690px){.company-card .company-emblem{font-size:var(--brand-size,48px)!important}.company-card>strong{font-size:23px}.company-card .company-card-head{padding:14px}.company-card .brand-kicker{font-size:8px}.active-company-wordmark{font-size:14px;min-width:75px;padding:10px}.company-oyo .company-emblem{font-size:83px!important}.company-dupaco .company-emblem{font-size:53px!important}}
+@media(prefers-reduced-motion:reduce){.company-brand-shape,.company-card .company-surface{transition:none!important}}
