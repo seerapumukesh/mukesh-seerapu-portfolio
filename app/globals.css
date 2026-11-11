@@ -307,3 +307,44 @@
  .orbit-turntable{transform-origin:165px 190px}
 }
 @media(prefers-reduced-motion:reduce){.orbit-turntable,.nav-wheel .nav-node.orbit-button{transition:none!important;will-change:auto}}
+
+/* About: compact credentials, peer recommendations, and education */
+.about-page .story-top{margin-bottom:6px}
+.about-section{margin-top:84px;padding-top:25px;border-top:1px solid var(--ink)}
+.about-section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:28px}
+.section-eyebrow{font:10px 'DM Mono',monospace;letter-spacing:.09em;color:var(--green);margin:0 0 12px}
+.about-section-heading h2{font:600 clamp(25px,2.6vw,40px)/1.15 'Space Grotesk',sans-serif;letter-spacing:-.055em;margin:0}
+.about-section-heading>p{margin:0;color:#7a8075;font-size:12px;line-height:1.5;max-width:225px;text-align:right}
+.credential-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.credential-tile{min-height:188px;display:flex;flex-direction:column;justify-content:space-between;padding:21px 23px;background:#e4e7dd;border:1px solid #c6cec1;transition:background-color .2s,transform .2s,box-shadow .2s}
+a.credential-tile:hover{transform:translateY(-3px);box-shadow:5px 6px 0 #d0d6c8}
+.credential-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.credential-brand{font:500 11px 'DM Mono',monospace;letter-spacing:.09em}
+.credential-top>span:last-child{font-size:21px;line-height:1}
+.credential-tile strong{font:600 clamp(19px,2vw,29px)/1.13 'Space Grotesk',sans-serif;letter-spacing:-.045em;max-width:380px}
+.credential-bottom{font-size:11px;color:#667268}
+.credential-microsoft{background:#dfe9e7;color:#245c59;border-color:#abc9c1}
+.credential-databricks{background:#f3e3d8;color:#a5482e;border-color:#dfc0af}
+.credential-qlik{background:#e5ead4;color:#426439;border-color:#bfcda9}
+.credential-iowa{background:#efe4e1;color:#933e4e;border-color:#dbc3c5}
+.testimonial-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.recommendation{position:relative;min-height:285px;background:#f9f7f1;border:1px solid #d8d7cb;margin:0;padding:28px 27px;display:flex;flex-direction:column;gap:12px}
+.quote-glyph{position:absolute;top:7px;right:19px;font:70px/.9 Georgia,serif;color:#ccdbce}
+.recommendation>p{position:relative;z-index:1;font-size:15px;line-height:1.65;color:#475148;margin:0;max-width:440px}
+.recommendation footer{display:flex;flex-direction:column;gap:4px;margin-top:auto;padding-top:18px;border-top:1px solid #e0e2da;background:none;font-size:12px;line-height:1.5}
+.recommendation footer strong{font-weight:700;color:var(--ink)}
+.recommendation footer span{color:#636c61}
+.recommendation footer small{font:10px 'DM Mono',monospace;color:#8c9489;margin-top:4px}
+.recommendation-note{font-size:11px;line-height:1.6;color:#788077;margin-top:14px}
+.recommendation-note a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.education-rows{border-top:1px solid var(--rule)}
+.education-rows>div{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) auto;gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid var(--rule)}
+.education-rows strong{font-size:15px;letter-spacing:-.02em}
+.education-rows span{font-size:13px;color:#6e766d}
+.education-rows small{font:10px 'DM Mono',monospace;color:#838a80}
+.about-connect{margin-top:75px;padding:25px 0;border-top:1px solid var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
+.about-connect>span{font:10px 'DM Mono',monospace;letter-spacing:.06em}
+.about-connect button{font:500 12px 'DM Mono',monospace;padding:14px 19px;display:flex;gap:25px;align-items:center;border:0;color:#fff;background:var(--green);transition:background .2s}
+.about-connect button:hover{background:var(--orange)}
+@media(max-width:900px){.testimonial-grid,.credential-grid{grid-template-columns:1fr}.credential-tile{min-height:158px}.recommendation{min-height:250px}.education-rows>div{grid-template-columns:1fr;gap:6px}.about-section-heading>p{display:none}}
+@media(max-width:690px){.about-section{margin-top:60px}.about-section-heading h2{font-size:26px}.credential-tile{min-height:160px}.recommendation{padding:22px;min-height:auto}.recommendation>p{font-size:14px}.education-rows strong{font-size:14px}.about-connect{flex-direction:column;align-items:flex-start}}
